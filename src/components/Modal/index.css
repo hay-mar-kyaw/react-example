@@ -18,3 +18,11 @@
 .modal h1 {
     margin: 20px;
 }
+
+.border-red{
+    border : 3px solid red;
+}
+
+.border-blue {
+    border : 3px solid blue;
+}

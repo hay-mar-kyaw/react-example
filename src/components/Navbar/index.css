@@ -1,7 +1,8 @@
 /* nav component */
 nav {
-    background-color: yellow;
+    background-color: gray;
     padding: 10px;
+    color:white;
 }
 .container {
     display: flex;
