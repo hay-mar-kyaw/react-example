@@ -38,6 +38,11 @@ function App() {
   },
  ])
 
+ let addPost = (post) => {
+    setPost((prevState => [...prevState,post]))
+    setShowModal(false);
+ }
+
 //  Deleting Post using useState 
 
 //  let deletePost = (id) =>{
@@ -57,7 +62,7 @@ function App() {
           <PostsList posts={posts}/> 
           {showModal && <Modal danger={false} setShowModal={setShowModal}>
             {/* slot */}
-              <PostForm/>
+              <PostForm addPost={addPost}/>
               
           </Modal> }
         </>
