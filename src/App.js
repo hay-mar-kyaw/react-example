@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import PostsList from './components/PostsList';
 import Modal from './components/Modal';
+import PostForm from './components/PostForm';
 
 function App() {
 
@@ -54,11 +55,10 @@ function App() {
         <>
           <Navbar setShowModal={setShowModal}/>
           <PostsList posts={posts}/> 
-          {showModal && <Modal danger={false}>
+          {showModal && <Modal danger={false} setShowModal={setShowModal}>
             {/* slot */}
-              <h1>Zoom class is open now</h1>
-              <p>Join here</p>
-              <button onClick={()=>setShowModal(false)}>Close</button>
+              <PostForm/>
+              
           </Modal> }
         </>
         

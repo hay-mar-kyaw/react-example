@@ -9,7 +9,7 @@ export default function Navbar({setShowModal}) {
                 <ul>
                     <li>Home</li>
                     <li>Posts</li>
-                    <li onClick={()=>setShowModal(true)}>Sign in</li>
+                    <li onClick={()=>setShowModal(true)}>Create Post</li>
                 </ul>
             </div>
         </nav>
