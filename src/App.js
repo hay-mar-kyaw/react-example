@@ -4,6 +4,7 @@ import Image from './assets/image.avif';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import PostsList from './components/PostsList';
+import Modal from './components/Modal';
 
 function App() {
 
@@ -52,7 +53,12 @@ function App() {
   return (
         <>
           <Navbar/>
-          <PostsList posts={posts}/>  
+          <PostsList posts={posts}/> 
+          <Modal>
+            {/* children components */}
+              <h1>Zoom class is open now</h1>
+              <p>Join here</p>
+          </Modal> 
         </>
         
 
