@@ -54,7 +54,7 @@ function App() {
         <>
           <Navbar setShowModal={setShowModal}/>
           <PostsList posts={posts}/> 
-          {showModal && <Modal>
+          {showModal && <Modal danger={false}>
             {/* slot */}
               <h1>Zoom class is open now</h1>
               <p>Join here</p>
