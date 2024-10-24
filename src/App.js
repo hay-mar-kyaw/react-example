@@ -19,7 +19,7 @@ function App() {
   //   setCount((prevState)=>prevState+1); //using prevState instead of (count) 
     
   // }
-
+  let [showModal,setShowModal] = useState(false);
   // create post 
 
  let [posts,setPost] = useState([
@@ -52,13 +52,14 @@ function App() {
   // }
   return (
         <>
-          <Navbar/>
+          <Navbar setShowModal={setShowModal}/>
           <PostsList posts={posts}/> 
-          <Modal>
-            {/* children components */}
+          {showModal && <Modal>
+            {/* slot */}
               <h1>Zoom class is open now</h1>
               <p>Join here</p>
-          </Modal> 
+              <button onClick={()=>setShowModal(false)}>Close</button>
+          </Modal> }
         </>
         
 
