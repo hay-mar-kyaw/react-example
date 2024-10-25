@@ -6,7 +6,11 @@ export default function PostsList({posts}) {
   return (
             <div className="postList">
                 {
-                    posts.map((post=><div className={`single-post ${styles.card}`} key={post.id}>{post.title}</div>))
+                    posts.map((post=><div className={`single-post ${styles.card}`} key={post.id}>
+                      <h3>title - {post.title}</h3>
+                      <h4>status- {post.status}</h4>
+                      
+                      </div>))
                 }
                 
             </div>

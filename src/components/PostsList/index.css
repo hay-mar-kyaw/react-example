@@ -11,6 +11,7 @@
     
     margin: 20px;
     flex-basis: 350px ;
+    flex-direction: column;
     height: 300px;
     display: flex;
     justify-content: center;
